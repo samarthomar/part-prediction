@@ -1,0 +1,378 @@
+{
+  "refrigerator": {
+    "case_intelligence": {
+      "product_type": "Refrigerator",
+      "model": "RF-28X",
+      "symptoms": ["cooling_issue", "ice_buildup", "humming_noise", "temperature_fluctuation"],
+      "urgency": "medium",
+      "error_codes": [],
+      "issue_summary": "Refrigerator experiencing cooling failure with ice buildup on back panel and continuous humming noise, indicating potential compressor or thermostat malfunction.",
+      "agent1_status": "completed"
+    },
+    "context_enrichment": {
+      "similar_cases": [
+        {
+          "score": "0.94",
+          "metadata": {
+            "case_id": "C-1001",
+            "product_type": "Refrigerator",
+            "model": "RF-28X",
+            "issue_category": "Cooling Failure",
+            "parts_used": "compressor, thermostat",
+            "primary_part": "compressor",
+            "fix_successful": "True",
+            "first_time_fix": "True",
+            "resolution_time_hours": "3.5",
+            "root_cause": "compressor_wear",
+            "technician_notes": "Compressor winding resistance was out of spec. Replaced compressor and recalibrated thermostat. Unit cooling normally after repair."
+          }
+        },
+        {
+          "score": "0.89",
+          "metadata": {
+            "case_id": "C-1003",
+            "product_type": "Refrigerator",
+            "model": "RF-22S",
+            "issue_category": "Temperature Fluctuation",
+            "parts_used": "thermostat",
+            "primary_part": "thermostat",
+            "fix_successful": "True",
+            "first_time_fix": "True",
+            "resolution_time_hours": "2.0",
+            "root_cause": "thermostat_failure",
+            "technician_notes": "Thermostat sensor was reading incorrect temperatures. Replaced with new NTC probe module."
+          }
+        },
+        {
+          "score": "0.82",
+          "metadata": {
+            "case_id": "C-1005",
+            "product_type": "Refrigerator",
+            "model": "RF-28X",
+            "issue_category": "Ice Buildup",
+            "parts_used": "evaporator_coil, thermostat",
+            "primary_part": "evaporator_coil",
+            "fix_successful": "True",
+            "first_time_fix": "False",
+            "resolution_time_hours": "5.0",
+            "root_cause": "evaporator_blockage",
+            "technician_notes": "Evaporator coil had frost blockage. Defrost heater was also weak. Replaced evaporator assembly."
+          }
+        }
+      ],
+      "agent2_status": "completed"
+    },
+    "parts_prediction": {
+      "predicted_parts": [
+        {
+          "part_name": "compressor",
+          "confidence_percent": 92,
+          "reasoning": "Compressor failure is the primary cause in 78% of similar cooling complaints with humming noise for RF-28X units over 4 years old."
+        },
+        {
+          "part_name": "thermostat",
+          "confidence_percent": 78,
+          "reasoning": "Thermostat malfunction was a secondary factor in 45% of similar cases, often failing alongside the compressor in older units."
+        },
+        {
+          "part_name": "evaporator_coil",
+          "confidence_percent": 45,
+          "reasoning": "Ice buildup symptoms suggest possible evaporator coil blockage, though this is less common in RF-28X models."
+        }
+      ],
+      "agent3_status": "completed"
+    },
+    "supply_decision": {
+      "supply_decisions": [
+        {
+          "part_name": "compressor",
+          "part_id": "P-101",
+          "part_description": "Hermetic Reciprocating Compressor 1.5HP for Refrigerators",
+          "stock_quantity": 15,
+          "warehouse_location": "Delhi DC",
+          "unit_cost_inr": 4500,
+          "substitute_part_name": "compressor_v2",
+          "decision": "AUTO_ORDER",
+          "confidence": 92
+        },
+        {
+          "part_name": "thermostat",
+          "part_id": "P-103",
+          "part_description": "Digital Thermostat Sensor Module with NTC Probe",
+          "stock_quantity": 32,
+          "warehouse_location": "Delhi DC",
+          "unit_cost_inr": 850,
+          "substitute_part_name": null,
+          "decision": "AUTO_ORDER",
+          "confidence": 78
+        },
+        {
+          "part_name": "evaporator_coil",
+          "part_id": "P-104",
+          "part_description": "Copper-Aluminium Evaporator Coil Assembly",
+          "stock_quantity": 0,
+          "warehouse_location": "Chennai DC",
+          "unit_cost_inr": 3200,
+          "substitute_part_name": "evaporator_coil_v2",
+          "decision": "ESCALATE_TO_HUMAN",
+          "confidence": 45
+        }
+      ],
+      "agent4_status": "completed"
+    },
+    "feedback_learning": {
+      "feedback_report": {
+        "predicted_parts_count": 3,
+        "simulated_accuracy": 88,
+        "confidence_summary": {
+          "highest": 92,
+          "lowest": 45,
+          "average": 72
+        },
+        "recommendation_quality": "high",
+        "logged_to_vectorstore": true
+      },
+      "agent5_status": "completed"
+    }
+  },
+  "washing_machine": {
+    "case_intelligence": {
+      "product_type": "Washing Machine",
+      "model": "WM-12A",
+      "symptoms": ["water_leak", "excessive_vibration", "spin_cycle_issue"],
+      "urgency": "high",
+      "error_codes": [],
+      "issue_summary": "Washing machine leaking water from bottom during spin cycle with excessive vibration, indicating potential drain pump or bearing failure.",
+      "agent1_status": "completed"
+    },
+    "context_enrichment": {
+      "similar_cases": [
+        {
+          "score": "0.91",
+          "metadata": {
+            "case_id": "C-1010",
+            "product_type": "Washing Machine",
+            "model": "WM-12A",
+            "issue_category": "Water Leak",
+            "parts_used": "drain_pump, inlet_valve",
+            "primary_part": "drain_pump",
+            "fix_successful": "True",
+            "first_time_fix": "True",
+            "resolution_time_hours": "2.5",
+            "root_cause": "pump_seal_failure",
+            "technician_notes": "Drain pump seal was cracked. Water pooling during spin cycle. Replaced pump assembly and checked hose connections."
+          }
+        },
+        {
+          "score": "0.85",
+          "metadata": {
+            "case_id": "C-1012",
+            "product_type": "Washing Machine",
+            "model": "WM-18B",
+            "issue_category": "Vibration Issue",
+            "parts_used": "drum_bearing",
+            "primary_part": "drum_bearing",
+            "fix_successful": "True",
+            "first_time_fix": "True",
+            "resolution_time_hours": "4.0",
+            "root_cause": "bearing_wear",
+            "technician_notes": "Drum bearing was worn causing excessive vibration. Replaced bearing kit and balanced drum."
+          }
+        }
+      ],
+      "agent2_status": "completed"
+    },
+    "parts_prediction": {
+      "predicted_parts": [
+        {
+          "part_name": "drain_pump",
+          "confidence_percent": 89,
+          "reasoning": "Drain pump seal failure is the most common cause of water leaks during spin cycle in WM-12A models."
+        },
+        {
+          "part_name": "drum_bearing",
+          "confidence_percent": 72,
+          "reasoning": "Excessive vibration during spin cycle strongly suggests worn drum bearings, found in 60% of similar cases."
+        },
+        {
+          "part_name": "inlet_valve",
+          "confidence_percent": 38,
+          "reasoning": "Inlet valve may contribute to water leak if not sealing properly, but less likely as primary cause."
+        }
+      ],
+      "agent3_status": "completed"
+    },
+    "supply_decision": {
+      "supply_decisions": [
+        {
+          "part_name": "drain_pump",
+          "part_id": "P-201",
+          "part_description": "Centrifugal Drain Pump Assembly 30W",
+          "stock_quantity": 18,
+          "warehouse_location": "Mumbai DC",
+          "unit_cost_inr": 1200,
+          "substitute_part_name": "drain_pump_v2",
+          "decision": "AUTO_ORDER",
+          "confidence": 89
+        },
+        {
+          "part_name": "drum_bearing",
+          "part_id": "P-205",
+          "part_description": "Front Load Drum Bearing Kit (6205-2RS)",
+          "stock_quantity": 10,
+          "warehouse_location": "Delhi DC",
+          "unit_cost_inr": 950,
+          "substitute_part_name": null,
+          "decision": "RESERVE",
+          "confidence": 72
+        },
+        {
+          "part_name": "inlet_valve",
+          "part_id": "P-208",
+          "part_description": "Dual Solenoid Water Inlet Valve Assembly",
+          "stock_quantity": 25,
+          "warehouse_location": "Delhi DC",
+          "unit_cost_inr": 680,
+          "substitute_part_name": null,
+          "decision": "ESCALATE_TO_HUMAN",
+          "confidence": 38
+        }
+      ],
+      "agent4_status": "completed"
+    },
+    "feedback_learning": {
+      "feedback_report": {
+        "predicted_parts_count": 3,
+        "simulated_accuracy": 85,
+        "confidence_summary": {
+          "highest": 89,
+          "lowest": 38,
+          "average": 66
+        },
+        "recommendation_quality": "high",
+        "logged_to_vectorstore": true
+      },
+      "agent5_status": "completed"
+    }
+  },
+  "hvac": {
+    "case_intelligence": {
+      "product_type": "HVAC/Air Conditioner",
+      "model": "AC-22R",
+      "symptoms": ["grinding_noise", "not_cooling", "error_code_E205"],
+      "urgency": "high",
+      "error_codes": ["E205"],
+      "issue_summary": "HVAC unit making grinding noise and failing to cool with error code E205, suggesting thermostat sensor or blower motor failure.",
+      "agent1_status": "completed"
+    },
+    "context_enrichment": {
+      "similar_cases": [
+        {
+          "score": "0.93",
+          "metadata": {
+            "case_id": "C-1020",
+            "product_type": "HVAC/Air Conditioner",
+            "model": "AC-22R",
+            "issue_category": "Cooling Failure",
+            "parts_used": "thermostat, blower_motor",
+            "primary_part": "thermostat",
+            "fix_successful": "True",
+            "first_time_fix": "True",
+            "resolution_time_hours": "3.0",
+            "root_cause": "thermostat_sensor_failure",
+            "technician_notes": "Error E205 confirmed thermostat sensor out of range. Also found blower motor bearings worn. Replaced both components."
+          }
+        },
+        {
+          "score": "0.87",
+          "metadata": {
+            "case_id": "C-1022",
+            "product_type": "HVAC/Air Conditioner",
+            "model": "AC-30S",
+            "issue_category": "Noise Issue",
+            "parts_used": "blower_motor",
+            "primary_part": "blower_motor",
+            "fix_successful": "True",
+            "first_time_fix": "True",
+            "resolution_time_hours": "2.5",
+            "root_cause": "motor_bearing_failure",
+            "technician_notes": "Grinding noise was from worn motor bearings. Replaced blower motor assembly."
+          }
+        }
+      ],
+      "agent2_status": "completed"
+    },
+    "parts_prediction": {
+      "predicted_parts": [
+        {
+          "part_name": "thermostat",
+          "confidence_percent": 90,
+          "reasoning": "Error code E205 directly indicates thermostat sensor malfunction. Found in 85% of similar cases with this error code."
+        },
+        {
+          "part_name": "blower_motor",
+          "confidence_percent": 82,
+          "reasoning": "Grinding noise is a strong indicator of worn motor bearings. Blower motor replacement resolved 70% of similar noise complaints."
+        },
+        {
+          "part_name": "control_board",
+          "confidence_percent": 35,
+          "reasoning": "Control board failure could cause error E205 in rare cases, but less likely given the mechanical noise symptoms."
+        }
+      ],
+      "agent3_status": "completed"
+    },
+    "supply_decision": {
+      "supply_decisions": [
+        {
+          "part_name": "thermostat",
+          "part_id": "P-103",
+          "part_description": "Digital Thermostat Sensor Module with NTC Probe",
+          "stock_quantity": 32,
+          "warehouse_location": "Delhi DC",
+          "unit_cost_inr": 850,
+          "substitute_part_name": null,
+          "decision": "AUTO_ORDER",
+          "confidence": 90
+        },
+        {
+          "part_name": "blower_motor",
+          "part_id": "P-301",
+          "part_description": "AC Blower Motor Assembly 150W with Capacitor",
+          "stock_quantity": 8,
+          "warehouse_location": "Mumbai DC",
+          "unit_cost_inr": 2800,
+          "substitute_part_name": null,
+          "decision": "AUTO_ORDER",
+          "confidence": 82
+        },
+        {
+          "part_name": "control_board",
+          "part_id": "P-302",
+          "part_description": "Main PCB Control Board with Microprocessor Unit",
+          "stock_quantity": 5,
+          "warehouse_location": "Bangalore DC",
+          "unit_cost_inr": 3500,
+          "substitute_part_name": null,
+          "decision": "ESCALATE_TO_HUMAN",
+          "confidence": 35
+        }
+      ],
+      "agent4_status": "completed"
+    },
+    "feedback_learning": {
+      "feedback_report": {
+        "predicted_parts_count": 3,
+        "simulated_accuracy": 90,
+        "confidence_summary": {
+          "highest": 90,
+          "lowest": 35,
+          "average": 69
+        },
+        "recommendation_quality": "high",
+        "logged_to_vectorstore": true
+      },
+      "agent5_status": "completed"
+    }
+  }
+}

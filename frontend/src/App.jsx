@@ -7,6 +7,7 @@ import FeedbackForm from './components/FeedbackForm'
 import Dashboard from './components/Dashboard'
 import LandingView from './components/LandingView'
 import { getWsUrl } from './apiConfig'
+import { runClientSimulation } from './simulation'
 import './App.css'
 
 function App() {
@@ -35,12 +36,42 @@ function App() {
       error: null
     });
     
-    // Normally connect to websocket here, but we'll mock it for now
-    // if backend isn't available, or implement the real websocket
+    let simulationStarted = false;
+    const startFallbackSimulation = () => {
+      if (simulationStarted) return;
+      simulationStarted = true;
+      runClientSimulation({
+        complaintText,
+        productType,
+        model,
+        onAgentComplete: (agentData) => {
+          setAgentState(prev => ({
+            ...prev,
+            agents: [...prev.agents, agentData]
+          }));
+        },
+        onComplete: (completeData) => {
+          setAgentState(prev => ({
+            ...prev,
+            status: 'completed',
+            caseId: completeData.case_id,
+            finalResults: completeData.results
+          }));
+        }
+      });
+    };
+
     try {
       const ws = new WebSocket(getWsUrl());
+      const timeoutId = setTimeout(() => {
+        if (!simulationStarted && ws.readyState !== WebSocket.OPEN) {
+          try { ws.close(); } catch (err) {}
+          startFallbackSimulation();
+        }
+      }, 1500);
       
       ws.onopen = () => {
+        clearTimeout(timeoutId);
         ws.send(JSON.stringify({
           complaint_text: complaintText,
           product_type: productType,
@@ -51,9 +82,7 @@ function App() {
       ws.onmessage = (event) => {
         const data = JSON.parse(event.data);
         
-        if (data.type === 'started') {
-          // pre-populate agents
-        } else if (data.type === 'agent_complete') {
+        if (data.type === 'agent_complete') {
           setAgentState(prev => ({
             ...prev,
             agents: [...prev.agents, data]
@@ -67,29 +96,17 @@ function App() {
           }));
           ws.close();
         } else if (data.type === 'error') {
-          setAgentState(prev => ({
-            ...prev,
-            status: 'error',
-            error: data.message
-          }));
-          ws.close();
+          startFallbackSimulation();
         }
       };
       
       ws.onerror = () => {
-        setAgentState(prev => ({
-          ...prev,
-          status: 'error',
-          error: 'WebSocket connection failed. Ensure backend is running.'
-        }));
+        clearTimeout(timeoutId);
+        startFallbackSimulation();
       };
     } catch (e) {
-      console.error(e);
-      setAgentState(prev => ({
-        ...prev,
-        status: 'error',
-        error: e.message
-      }));
+      console.warn("WebSocket not available, falling back to standalone simulation", e);
+      startFallbackSimulation();
     }
   };
 

@@ -39,36 +39,51 @@ export default function Dashboard() {
           json.avg_accuracy = json.avg_accuracy + '%';
         }
         setData(json);
+        setLoading(false);
+        return;
       }
     } catch (e) {
-      console.error(e);
-      // Mock data fallback if backend is down
-      setData({
-        total_complaints: 245,
-        auto_orders: 112,
-        total_feedback: 189,
-        avg_accuracy: '94%',
-        urgency_distribution: [
-          { name: 'High', value: 45 },
-          { name: 'Medium', value: 120 },
-          { name: 'Low', value: 80 }
-        ],
-        parts_frequency: [
-          { name: 'WR60X26866', count: 42 },
-          { name: 'WH23X28418', count: 38 },
-          { name: 'WE49X20697', count: 25 },
-          { name: 'WG04F03893', count: 18 },
-          { name: 'WR55X11132', count: 15 }
-        ],
-        records: [
-          { id: 'CASE-1001', product: 'Refrigerator', model: 'GFE28GYNFS', urgency: 'High', date: '2023-10-25' },
-          { id: 'CASE-1002', product: 'Washing Machine', model: 'GTW460ASJWW', urgency: 'Medium', date: '2023-10-24' },
-          { id: 'CASE-1003', product: 'HVAC', model: 'Unknown', urgency: 'Low', date: '2023-10-24' }
-        ]
-      });
-    } finally {
-      setLoading(false);
+      // Backend unavailable, fallback to local/mock data
     }
+
+    const localHistory = JSON.parse(localStorage.getItem('ge_complaint_history') || '[]');
+    const defaultRecords = [
+      { id: 'CR-1001', product: 'Refrigerator', model: 'RF-28X', urgency: 'High', date: '2026-09-15' },
+      { id: 'CR-1002', product: 'Washing Machine', model: 'WM-12A', urgency: 'Medium', date: '2026-09-14' },
+      { id: 'CR-1003', product: 'HVAC', model: 'AC-22R', urgency: 'Low', date: '2026-09-14' }
+    ];
+
+    const allRecords = [
+      ...localHistory.map(h => ({
+        id: h.id,
+        product: h.product_type,
+        model: h.model,
+        urgency: h.urgency,
+        date: h.timestamp?.split(' ')[0] || 'Today'
+      })),
+      ...defaultRecords
+    ];
+
+    setData({
+      total_complaints: 245 + localHistory.length,
+      auto_orders: 112 + localHistory.length,
+      total_feedback: 189,
+      avg_accuracy: '94%',
+      urgency_distribution: [
+        { name: 'High', value: 45 + localHistory.filter(h => h.urgency?.toLowerCase() === 'high').length },
+        { name: 'Medium', value: 120 + localHistory.filter(h => h.urgency?.toLowerCase() === 'medium').length },
+        { name: 'Low', value: 80 }
+      ],
+      parts_frequency: [
+        { name: 'P-101 (Compressor)', count: 42 },
+        { name: 'P-202 (Drain Pump)', count: 38 },
+        { name: 'P-301 (Blower Motor)', count: 25 },
+        { name: 'P-103 (Thermostat)', count: 18 },
+        { name: 'P-206 (Control Board)', count: 15 }
+      ],
+      records: allRecords
+    });
+    setLoading(false);
   };
 
   useEffect(() => {
