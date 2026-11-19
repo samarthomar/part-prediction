@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <!-- GE Monogram Circle -->
+  <g transform="translate(50, 50)">
+    <!-- Outer circle -->
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#02193C" stroke-width="3"/>
+    <!-- Inner decorative circle -->
+    <circle cx="0" cy="0" r="36" fill="none" stroke="#02193C" stroke-width="1.5"/>
+    <!-- GE Letters -->
+    <text x="0" y="14" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="46" fill="#02193C" letter-spacing="-2">GE</text>
+    <!-- Decorative top swoosh -->
+    <path d="M -25,-36 C -15,-42 15,-42 25,-36" fill="none" stroke="#02193C" stroke-width="1.5"/>
+    <!-- Decorative bottom swoosh -->
+    <path d="M -25,36 C -15,42 15,42 25,36" fill="none" stroke="#02193C" stroke-width="1.5"/>
+  </g>
+  <!-- GE APPLIANCES Text -->
+  <text x="115" y="58" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="30" fill="#02193C" letter-spacing="3">GE APPLIANCES</text>
+</svg>

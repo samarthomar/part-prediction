@@ -1,0 +1,919 @@
+{
+  "complaint_history": [
+    {
+      "id": "CR-1001",
+      "timestamp": "2026-07-23 13:10:15",
+      "complaint": "The washer won't drain after the wash cycle finishes. It just sits there full of water and beeps. I tried cleaning the front filter but it was empty. When it tries to drain, I hear a clicking sound but the pump doesn't engage. Model is WM-18B\n",
+      "product_type": "Washing Machine",
+      "model": "WM-18B",
+      "urgency": "high",
+      "predicted_parts": [
+        {
+          "part_name": "drain_pump",
+          "confidence_percent": 90,
+          "reasoning": "The primary complaint is failure to drain water and no drain pump engagement, directly implicating the drain pump, which is also supported by past cases and a known issue regarding impeller cracks.",
+          "part_id": "P-202",
+          "part_description": "Centrifugal Drain Pump Motor 30W",
+          "image_url": "/static/parts/drain_pump.png"
+        },
+        {
+          "part_name": "control_board",
+          "confidence_percent": 60,
+          "reasoning": "The clicking sound heard when the drain pump fails to engage suggests a potential issue with the control board's relay attempting to activate the pump, and it appeared in similar past cases.",
+          "part_id": "P-206",
+          "part_description": "Main PCB Control Board with Display Module",
+          "image_url": "/static/parts/control_board.png"
+        }
+      ],
+      "supply_decisions": [
+        {
+          "part_name": "drain_pump",
+          "part_id": "P-202",
+          "part_description": "Centrifugal Drain Pump Motor 30W",
+          "confidence": 90,
+          "confidence_label": "\ud83d\udfe2 High (90%)",
+          "in_stock": false,
+          "quantity": 0,
+          "warehouse": "Mumbai DC",
+          "unit_cost": 1200,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "5-7 business days (backordered / substitute sourcing)",
+          "image_url": "/static/parts/drain_pump.png"
+        },
+        {
+          "part_name": "control_board",
+          "part_id": "P-206",
+          "part_description": "Main PCB Control Board with Display Module",
+          "confidence": 60,
+          "confidence_label": "\ud83d\udfe1 Medium (60%)",
+          "in_stock": true,
+          "quantity": 5,
+          "warehouse": "Bangalore DC",
+          "unit_cost": 2800,
+          "substitute": null,
+          "decision": "RESERVE",
+          "decision_label": "\ud83d\udd36 RESERVE \u2014 Part reserved pending technician confirmation",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/control_board.png"
+        }
+      ],
+      "feedback_report": {
+        "prediction_logged": true,
+        "timestamp": "2026-07-23T07:40:14Z",
+        "issue_summary": "The washing machine fails to drain water after the wash cycle, remaining full of water and beeping, with a clicking sound heard but no drain pump engagement.",
+        "urgency": "high",
+        "predicted_parts_count": 2,
+        "confidence_summary": {
+          "average": 75.0,
+          "max": 90,
+          "min": 60
+        },
+        "decision_breakdown": {
+          "AUTO_ORDER": 1,
+          "RESERVE": 1
+        },
+        "recommendation_status": "logged_for_review",
+        "simulated_accuracy": 88.0,
+        "notes": "This is a simulated feedback entry. In production, accuracy would be computed by comparing predicted parts against actual parts used during the repair."
+      }
+    },
+    {
+      "id": "CR-1002",
+      "timestamp": "2026-07-23 13:10:50",
+      "complaint": "The washer won't drain after the wash cycle finishes. It just sits there full of water and beeps. I tried cleaning the front filter but it was empty. When it tries to drain, I hear a clicking sound but the pump doesn't engage. Model is WM-18B\n",
+      "product_type": "Washing Machine",
+      "model": "WM-18B",
+      "urgency": "high",
+      "predicted_parts": [
+        {
+          "part_name": "drain_pump",
+          "confidence_percent": 90,
+          "reasoning": "The primary complaint is failure to drain water and no drain pump engagement, directly implicating the drain pump, which is also supported by past cases and a known issue regarding impeller cracks.",
+          "part_id": "P-202",
+          "part_description": "Centrifugal Drain Pump Motor 30W",
+          "image_url": "/static/parts/drain_pump.png"
+        },
+        {
+          "part_name": "control_board",
+          "confidence_percent": 60,
+          "reasoning": "The clicking sound heard when the drain pump fails to engage suggests a potential issue with the control board's relay attempting to activate the pump, and it appeared in similar past cases.",
+          "part_id": "P-206",
+          "part_description": "Main PCB Control Board with Display Module",
+          "image_url": "/static/parts/control_board.png"
+        }
+      ],
+      "supply_decisions": [
+        {
+          "part_name": "drain_pump",
+          "part_id": "P-202",
+          "part_description": "Centrifugal Drain Pump Motor 30W",
+          "confidence": 90,
+          "confidence_label": "\ud83d\udfe2 High (90%)",
+          "in_stock": false,
+          "quantity": 0,
+          "warehouse": "Mumbai DC",
+          "unit_cost": 1200,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "5-7 business days (backordered / substitute sourcing)",
+          "image_url": "/static/parts/drain_pump.png"
+        },
+        {
+          "part_name": "control_board",
+          "part_id": "P-206",
+          "part_description": "Main PCB Control Board with Display Module",
+          "confidence": 60,
+          "confidence_label": "\ud83d\udfe1 Medium (60%)",
+          "in_stock": true,
+          "quantity": 5,
+          "warehouse": "Bangalore DC",
+          "unit_cost": 2800,
+          "substitute": null,
+          "decision": "RESERVE",
+          "decision_label": "\ud83d\udd36 RESERVE \u2014 Part reserved pending technician confirmation",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/control_board.png"
+        }
+      ],
+      "feedback_report": {
+        "prediction_logged": true,
+        "timestamp": "2026-07-23T07:40:48Z",
+        "issue_summary": "The washing machine fails to drain water after the wash cycle, remaining full of water and beeping, with a clicking sound heard but no drain pump engagement.",
+        "urgency": "high",
+        "predicted_parts_count": 2,
+        "confidence_summary": {
+          "average": 75.0,
+          "max": 90,
+          "min": 60
+        },
+        "decision_breakdown": {
+          "AUTO_ORDER": 1,
+          "RESERVE": 1
+        },
+        "recommendation_status": "logged_for_review",
+        "simulated_accuracy": 81.0,
+        "notes": "This is a simulated feedback entry. In production, accuracy would be computed by comparing predicted parts against actual parts used during the repair."
+      }
+    },
+    {
+      "id": "CR-1003",
+      "timestamp": "2026-07-23 13:11:55",
+      "complaint": "Our server room AC stopped cooling entirely this morning. The fan is running but there's a strong burning plastic smell coming from the external compressor unit. The thermostat display is flashing error code E-902. We need this fixed immediately before servers overheat. Model is AC-30S.\n",
+      "product_type": "HVAC/Air Conditioner",
+      "model": "AC-30S",
+      "urgency": "critical",
+      "predicted_parts": [
+        {
+          "part_name": "hvac_compressor",
+          "confidence_percent": 90,
+          "reasoning": "The burning plastic smell directly from the compressor unit, combined with a complete loss of cooling, strongly indicates an internal electrical failure or burnout of the compressor itself.",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "capacitor",
+          "confidence_percent": 80,
+          "reasoning": "A failed compressor start or run capacitor can cause the compressor to overheat, hum, or fail to start, leading to a burning smell and no cooling.",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u00ce\u00bcF 450V AC Dual Terminal",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "confidence_percent": 65,
+          "reasoning": "If the condenser fan motor (part of the external unit) has failed, it would cause the compressor to overheat and emit a burning smell due to lack of heat dissipation, leading to a loss of cooling.",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "supply_decisions": [
+        {
+          "part_name": "hvac_compressor",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "confidence": 90,
+          "confidence_label": "\ud83d\udfe2 High (90%)",
+          "in_stock": false,
+          "quantity": 0,
+          "warehouse": "Mumbai DC",
+          "unit_cost": 8500,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "5-7 business days (backordered / substitute sourcing)",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "capacitor",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u03bcF 450V AC Dual Terminal",
+          "confidence": 80,
+          "confidence_label": "\ud83d\udfe2 High (80%)",
+          "in_stock": true,
+          "quantity": 50,
+          "warehouse": "Delhi DC",
+          "unit_cost": 350,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "confidence": 65,
+          "confidence_label": "\ud83d\udfe1 Medium (65%)",
+          "in_stock": true,
+          "quantity": 22,
+          "warehouse": "Delhi DC",
+          "unit_cost": 2200,
+          "substitute": null,
+          "decision": "RESERVE",
+          "decision_label": "\ud83d\udd36 RESERVE \u2014 Part reserved pending technician confirmation",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "feedback_report": {
+        "prediction_logged": true,
+        "timestamp": "2026-07-23T07:41:54Z",
+        "issue_summary": "Server room AC has stopped cooling, emitting a burning plastic smell from the compressor, and displaying error code E-902, posing an immediate risk of server overheating.",
+        "urgency": "critical",
+        "predicted_parts_count": 3,
+        "confidence_summary": {
+          "average": 78.3,
+          "max": 90,
+          "min": 65
+        },
+        "decision_breakdown": {
+          "AUTO_ORDER": 2,
+          "RESERVE": 1
+        },
+        "recommendation_status": "logged_for_review",
+        "simulated_accuracy": 80.7,
+        "notes": "This is a simulated feedback entry. In production, accuracy would be computed by comparing predicted parts against actual parts used during the repair."
+      }
+    },
+    {
+      "id": "CR-1004",
+      "timestamp": "2026-07-23 13:26:37",
+      "complaint": "Our server room AC stopped cooling entirely this morning. The fan is running but there's a strong burning plastic smell coming from the external compressor unit. The thermostat display is flashing error code E-902. We need this fixed immediately before servers overheat. Model is AC-30S.",
+      "product_type": "HVAC/Air Conditioner",
+      "model": "AC-30S",
+      "urgency": "critical",
+      "predicted_parts": [
+        {
+          "part_name": "capacitor",
+          "confidence_percent": 85,
+          "reasoning": "A failed capacitor is a very common cause for an AC unit to stop cooling and can emit a burning plastic smell when it overheats or fails, often preventing the compressor or fan motor from starting.",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u00ce\u00bcF 450V AC Dual Terminal",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "hvac_compressor",
+          "confidence_percent": 80,
+          "reasoning": "The primary component for cooling, a burning plastic smell from the external compressor unit combined with no cooling strongly suggests a compressor motor winding failure.",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "confidence_percent": 65,
+          "reasoning": "If this refers to the external condenser fan motor, its failure could cause overheating and a burning smell, leading to the compressor shutting down due to high pressure and resulting in no cooling.",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "supply_decisions": [
+        {
+          "part_name": "capacitor",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u03bcF 450V AC Dual Terminal",
+          "confidence": 85,
+          "confidence_label": "\ud83d\udfe2 High (85%)",
+          "in_stock": true,
+          "quantity": 50,
+          "warehouse": "Delhi DC",
+          "unit_cost": 350,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "hvac_compressor",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "confidence": 80,
+          "confidence_label": "\ud83d\udfe2 High (80%)",
+          "in_stock": false,
+          "quantity": 0,
+          "warehouse": "Mumbai DC",
+          "unit_cost": 8500,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "5-7 business days (backordered / substitute sourcing)",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "confidence": 65,
+          "confidence_label": "\ud83d\udfe1 Medium (65%)",
+          "in_stock": true,
+          "quantity": 22,
+          "warehouse": "Delhi DC",
+          "unit_cost": 2200,
+          "substitute": null,
+          "decision": "RESERVE",
+          "decision_label": "\ud83d\udd36 RESERVE \u2014 Part reserved pending technician confirmation",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "feedback_report": {
+        "prediction_logged": true,
+        "timestamp": "2026-07-23T07:56:36Z",
+        "issue_summary": "The server room AC has stopped cooling, emitting a burning plastic smell from the external compressor unit, and displaying error code E-902, requiring immediate repair to prevent server overheating.",
+        "urgency": "critical",
+        "predicted_parts_count": 3,
+        "confidence_summary": {
+          "average": 76.7,
+          "max": 85,
+          "min": 65
+        },
+        "decision_breakdown": {
+          "AUTO_ORDER": 2,
+          "RESERVE": 1
+        },
+        "recommendation_status": "logged_for_review",
+        "simulated_accuracy": 91.7,
+        "notes": "This is a simulated feedback entry. In production, accuracy would be computed by comparing predicted parts against actual parts used during the repair."
+      }
+    },
+    {
+      "id": "CR-1005",
+      "timestamp": "2026-07-23 13:32:59",
+      "complaint": "Our server room AC stopped cooling entirely this morning. The fan is running but there's a strong burning plastic smell coming from the external compressor unit. The thermostat display is flashing error code E-902. We need this fixed immediately before servers overheat. Model is AC-30S.",
+      "product_type": "HVAC/Air Conditioner",
+      "model": "AC-30S",
+      "urgency": "critical",
+      "predicted_parts": [
+        {
+          "part_name": "capacitor",
+          "confidence_percent": 85,
+          "reasoning": "A failed capacitor is a very common cause for an AC unit to stop cooling and can emit a burning plastic smell when it overheats or fails, often preventing the compressor or fan motor from starting.",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u00ce\u00bcF 450V AC Dual Terminal",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "hvac_compressor",
+          "confidence_percent": 80,
+          "reasoning": "The primary component for cooling, a burning plastic smell from the external compressor unit combined with no cooling strongly suggests a compressor motor winding failure.",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "confidence_percent": 65,
+          "reasoning": "If this refers to the external condenser fan motor, its failure could cause overheating and a burning smell, leading to the compressor shutting down due to high pressure and resulting in no cooling.",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "supply_decisions": [
+        {
+          "part_name": "capacitor",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u03bcF 450V AC Dual Terminal",
+          "confidence": 85,
+          "confidence_label": "\ud83d\udfe2 High (85%)",
+          "in_stock": true,
+          "quantity": 50,
+          "warehouse": "Delhi DC",
+          "unit_cost": 350,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "hvac_compressor",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "confidence": 80,
+          "confidence_label": "\ud83d\udfe2 High (80%)",
+          "in_stock": false,
+          "quantity": 0,
+          "warehouse": "Mumbai DC",
+          "unit_cost": 8500,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "5-7 business days (backordered / substitute sourcing)",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "confidence": 65,
+          "confidence_label": "\ud83d\udfe1 Medium (65%)",
+          "in_stock": true,
+          "quantity": 22,
+          "warehouse": "Delhi DC",
+          "unit_cost": 2200,
+          "substitute": null,
+          "decision": "RESERVE",
+          "decision_label": "\ud83d\udd36 RESERVE \u2014 Part reserved pending technician confirmation",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "feedback_report": {
+        "prediction_logged": true,
+        "timestamp": "2026-07-23T08:02:58Z",
+        "issue_summary": "The server room AC has stopped cooling, emitting a burning plastic smell from the external compressor unit, and displaying error code E-902, requiring immediate repair to prevent server overheating.",
+        "urgency": "critical",
+        "predicted_parts_count": 3,
+        "confidence_summary": {
+          "average": 76.7,
+          "max": 85,
+          "min": 65
+        },
+        "decision_breakdown": {
+          "AUTO_ORDER": 2,
+          "RESERVE": 1
+        },
+        "recommendation_status": "logged_for_review",
+        "simulated_accuracy": 82.8,
+        "notes": "This is a simulated feedback entry. In production, accuracy would be computed by comparing predicted parts against actual parts used during the repair."
+      }
+    },
+    {
+      "id": "CR-1006",
+      "timestamp": "2026-07-29 15:25:15",
+      "complaint": "Our server room AC stopped cooling entirely this morning. The fan is running but there's a strong burning plastic smell coming from the external compressor unit. The thermostat display is flashing error code E-902. We need this fixed immediately before servers overheat. Model is AC-30S.",
+      "product_type": "HVAC/Air Conditioner",
+      "model": "AC-30S",
+      "urgency": "critical",
+      "predicted_parts": [
+        {
+          "part_name": "hvac_compressor",
+          "confidence_percent": 85,
+          "reasoning": "The strong burning plastic smell originating from the external compressor unit, combined with a complete lack of cooling, strongly indicates a failure of the compressor motor windings or internal components.",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "capacitor",
+          "confidence_percent": 75,
+          "reasoning": "A failed compressor start or run capacitor is a very common cause for a compressor not starting or running efficiently, leading to no cooling and often emitting a burning electrical smell from the unit.",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u00ce\u00bcF 450V AC Dual Terminal",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "confidence_percent": 60,
+          "reasoning": "A failing condenser fan motor in the external unit can overheat, emit a burning smell, and cause the compressor to trip due to lack of heat dissipation, resulting in no cooling.",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "supply_decisions": [
+        {
+          "part_name": "hvac_compressor",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "confidence": 85,
+          "confidence_label": "\ud83d\udfe2 High (85%)",
+          "in_stock": false,
+          "quantity": 0,
+          "warehouse": "Mumbai DC",
+          "unit_cost": 8500,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "5-7 business days (backordered / substitute sourcing)",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "capacitor",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u03bcF 450V AC Dual Terminal",
+          "confidence": 75,
+          "confidence_label": "\ud83d\udfe2 High (75%)",
+          "in_stock": true,
+          "quantity": 50,
+          "warehouse": "Delhi DC",
+          "unit_cost": 350,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "confidence": 60,
+          "confidence_label": "\ud83d\udfe1 Medium (60%)",
+          "in_stock": true,
+          "quantity": 22,
+          "warehouse": "Delhi DC",
+          "unit_cost": 2200,
+          "substitute": null,
+          "decision": "RESERVE",
+          "decision_label": "\ud83d\udd36 RESERVE \u2014 Part reserved pending technician confirmation",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "feedback_report": {
+        "prediction_logged": true,
+        "timestamp": "2026-07-29T09:55:14Z",
+        "issue_summary": "The server room AC has stopped cooling, emitting a burning plastic smell from the external compressor unit, and displaying error code E-902, requiring immediate repair to prevent server overheating.",
+        "urgency": "critical",
+        "predicted_parts_count": 3,
+        "confidence_summary": {
+          "average": 73.3,
+          "max": 85,
+          "min": 60
+        },
+        "decision_breakdown": {
+          "AUTO_ORDER": 2,
+          "RESERVE": 1
+        },
+        "recommendation_status": "logged_for_review",
+        "simulated_accuracy": 87.8,
+        "notes": "This is a simulated feedback entry. In production, accuracy would be computed by comparing predicted parts against actual parts used during the repair."
+      }
+    },
+    {
+      "id": "CR-1007",
+      "timestamp": "2026-07-29 15:35:33",
+      "complaint": "Our server room AC stopped cooling entirely this morning. The fan is running but there's a strong burning plastic smell coming from the external compressor unit. The thermostat display is flashing error code E-902. We need this fixed immediately before servers overheat. Model is AC-30S.",
+      "product_type": "HVAC/Air Conditioner",
+      "model": "AC-30S",
+      "urgency": "critical",
+      "predicted_parts": [
+        {
+          "part_name": "hvac_compressor",
+          "confidence_percent": 85,
+          "reasoning": "The burning plastic smell from the compressor unit combined with a complete loss of cooling strongly indicates a catastrophic failure of the compressor motor itself.",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "capacitor",
+          "confidence_percent": 75,
+          "reasoning": "A failed compressor start/run capacitor is a common cause of compressor failure to start or run, leading to no cooling and often producing a burning smell.",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u00ce\u00bcF 450V AC Dual Terminal",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "confidence_percent": 60,
+          "reasoning": "If the condenser fan motor is failing (e.g., seized bearings or shorted windings), it would produce a burning smell from the compressor unit and lead to the compressor overheating and loss of cooling.",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "supply_decisions": [
+        {
+          "part_name": "hvac_compressor",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "confidence": 85,
+          "confidence_label": "\ud83d\udfe2 High (85%)",
+          "in_stock": false,
+          "quantity": 0,
+          "warehouse": "Mumbai DC",
+          "unit_cost": 8500,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "5-7 business days (backordered / substitute sourcing)",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "capacitor",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u03bcF 450V AC Dual Terminal",
+          "confidence": 75,
+          "confidence_label": "\ud83d\udfe2 High (75%)",
+          "in_stock": true,
+          "quantity": 50,
+          "warehouse": "Delhi DC",
+          "unit_cost": 350,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "confidence": 60,
+          "confidence_label": "\ud83d\udfe1 Medium (60%)",
+          "in_stock": true,
+          "quantity": 22,
+          "warehouse": "Delhi DC",
+          "unit_cost": 2200,
+          "substitute": null,
+          "decision": "RESERVE",
+          "decision_label": "\ud83d\udd36 RESERVE \u2014 Part reserved pending technician confirmation",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "feedback_report": {
+        "prediction_logged": true,
+        "timestamp": "2026-07-29T10:05:31Z",
+        "issue_summary": "Server room AC stopped cooling, fan is running, with a burning plastic smell from the compressor unit and error code E-902 displayed, posing an immediate risk of server overheating.",
+        "urgency": "critical",
+        "predicted_parts_count": 3,
+        "confidence_summary": {
+          "average": 73.3,
+          "max": 85,
+          "min": 60
+        },
+        "decision_breakdown": {
+          "AUTO_ORDER": 2,
+          "RESERVE": 1
+        },
+        "recommendation_status": "logged_for_review",
+        "simulated_accuracy": 92.2,
+        "notes": "This is a simulated feedback entry. In production, accuracy would be computed by comparing predicted parts against actual parts used during the repair."
+      }
+    },
+    {
+      "id": "CR-1008",
+      "timestamp": "2026-07-29 19:24:00",
+      "complaint": "Our server room AC stopped cooling entirely this morning. The fan is running but there's a strong burning plastic smell coming from the external compressor unit. The thermostat display is flashing error code E-902. We need this fixed immediately before servers overheat. Model is AC-30S.",
+      "product_type": "HVAC/Air Conditioner",
+      "model": "AC-30S",
+      "urgency": "critical",
+      "predicted_parts": [
+        {
+          "part_name": "hvac_compressor",
+          "confidence_percent": 85,
+          "reasoning": "The burning plastic smell from the compressor unit combined with a complete loss of cooling strongly indicates a catastrophic failure of the compressor motor itself.",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "capacitor",
+          "confidence_percent": 75,
+          "reasoning": "A failed compressor start/run capacitor is a common cause of compressor failure to start or run, leading to no cooling and often producing a burning smell.",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u00ce\u00bcF 450V AC Dual Terminal",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "confidence_percent": 60,
+          "reasoning": "If the condenser fan motor is failing (e.g., seized bearings or shorted windings), it would produce a burning smell from the compressor unit and lead to the compressor overheating and loss of cooling.",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "supply_decisions": [
+        {
+          "part_name": "hvac_compressor",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "confidence": 85,
+          "confidence_label": "\ud83d\udfe2 High (85%)",
+          "in_stock": false,
+          "quantity": 0,
+          "warehouse": "Mumbai DC",
+          "unit_cost": 8500,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "5-7 business days (backordered / substitute sourcing)",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "capacitor",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u03bcF 450V AC Dual Terminal",
+          "confidence": 75,
+          "confidence_label": "\ud83d\udfe2 High (75%)",
+          "in_stock": true,
+          "quantity": 50,
+          "warehouse": "Delhi DC",
+          "unit_cost": 350,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "confidence": 60,
+          "confidence_label": "\ud83d\udfe1 Medium (60%)",
+          "in_stock": true,
+          "quantity": 22,
+          "warehouse": "Delhi DC",
+          "unit_cost": 2200,
+          "substitute": null,
+          "decision": "RESERVE",
+          "decision_label": "\ud83d\udd36 RESERVE \u2014 Part reserved pending technician confirmation",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "feedback_report": {
+        "prediction_logged": true,
+        "timestamp": "2026-07-29T13:53:58Z",
+        "issue_summary": "Server room AC stopped cooling, fan is running, with a burning plastic smell from the compressor unit and error code E-902 displayed, posing an immediate risk of server overheating.",
+        "urgency": "critical",
+        "predicted_parts_count": 3,
+        "confidence_summary": {
+          "average": 73.3,
+          "max": 85,
+          "min": 60
+        },
+        "decision_breakdown": {
+          "AUTO_ORDER": 2,
+          "RESERVE": 1
+        },
+        "recommendation_status": "logged_for_review",
+        "simulated_accuracy": 81.3,
+        "notes": "This is a simulated feedback entry. In production, accuracy would be computed by comparing predicted parts against actual parts used during the repair."
+      }
+    },
+    {
+      "id": "CR-1009",
+      "timestamp": "2026-09-15 00:31:09",
+      "complaint": "Our server room AC stopped cooling entirely this morning. The fan is running but there's a strong burning plastic smell coming from the external compressor unit. The thermostat display is flashing error code E-902. We need this fixed immediately before servers overheat. Model is AC-30S.",
+      "product_type": "HVAC/Air Conditioner",
+      "model": "AC-30S",
+      "urgency": "critical",
+      "predicted_parts": [
+        {
+          "part_name": "capacitor",
+          "confidence_percent": 90,
+          "reasoning": "Capacitor failure is a common cause of motor overheating and burning smells in AC units, often leading to a complete loss of cooling.",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u00ce\u00bcF 450V AC Dual Terminal",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "hvac_compressor",
+          "confidence_percent": 85,
+          "reasoning": "A failing or seized compressor motor would cause a burning smell from the external unit and result in a complete loss of cooling.",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "confidence_percent": 75,
+          "reasoning": "An overheating or failing condenser fan motor in the external unit can emit a burning plastic smell and lead to compressor shutdown, stopping cooling.",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "supply_decisions": [
+        {
+          "part_name": "capacitor",
+          "part_id": "P-305",
+          "part_description": "Run Capacitor 35\u03bcF 450V AC Dual Terminal",
+          "confidence": 90,
+          "confidence_label": "\ud83d\udfe2 High (90%)",
+          "in_stock": true,
+          "quantity": 50,
+          "warehouse": "Delhi DC",
+          "unit_cost": 350,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/generic_part.png"
+        },
+        {
+          "part_name": "hvac_compressor",
+          "part_id": "P-302",
+          "part_description": "Rotary Scroll Compressor 2.0 Ton R410a",
+          "confidence": 85,
+          "confidence_label": "\ud83d\udfe2 High (85%)",
+          "in_stock": false,
+          "quantity": 0,
+          "warehouse": "Mumbai DC",
+          "unit_cost": 8500,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "5-7 business days (backordered / substitute sourcing)",
+          "image_url": "/static/parts/compressor.png"
+        },
+        {
+          "part_name": "fan_motor",
+          "part_id": "P-301",
+          "part_description": "Outdoor Unit Axial Fan Motor 80W for HVAC",
+          "confidence": 75,
+          "confidence_label": "\ud83d\udfe2 High (75%)",
+          "in_stock": true,
+          "quantity": 22,
+          "warehouse": "Delhi DC",
+          "unit_cost": 2200,
+          "substitute": null,
+          "decision": "AUTO_ORDER",
+          "decision_label": "\u2705 AUTO ORDER \u2014 Part will be dispatched automatically",
+          "delivery_estimate": "1-2 business days (in-stock)",
+          "image_url": "/static/parts/motor.png"
+        }
+      ],
+      "feedback_report": {
+        "prediction_logged": true,
+        "timestamp": "2026-09-14T19:01:07Z",
+        "issue_summary": "Server room AC stopped cooling, emitting a burning plastic smell from the external compressor unit, and displaying error code E-902, requiring immediate attention to prevent server overheating.",
+        "urgency": "critical",
+        "predicted_parts_count": 3,
+        "confidence_summary": {
+          "average": 83.3,
+          "max": 90,
+          "min": 75
+        },
+        "decision_breakdown": {
+          "AUTO_ORDER": 3
+        },
+        "recommendation_status": "logged_for_review",
+        "simulated_accuracy": 88.2,
+        "notes": "This is a simulated feedback entry. In production, accuracy would be computed by comparing predicted parts against actual parts used during the repair."
+      }
+    }
+  ],
+  "feedback_data": {
+    "CR-1017": {
+      "case_id": "CR-1017",
+      "accuracy": "Yes",
+      "actual_parts": "Drain Pump",
+      "notes": "no",
+      "submitted_at": "2026-07-23 00:57:33"
+    },
+    "CR-1003": {
+      "case_id": "CR-1003",
+      "accuracy": "Yes",
+      "actual_parts": "HVAC Compressor",
+      "notes": "No",
+      "submitted_at": "2026-07-23 13:12:37"
+    },
+    "CR-1004": {
+      "case_id": "CR-1004",
+      "accuracy": "Yes",
+      "actual_parts": "capacitor",
+      "notes": "No",
+      "submitted_at": "2026-07-23 13:27:11"
+    },
+    "CR-1005": {
+      "case_id": "CR-1005",
+      "accuracy": "Yes",
+      "actual_parts": "capacitor",
+      "notes": "no",
+      "submitted_at": "2026-07-23 13:33:38"
+    },
+    "CR-1007": {
+      "case_id": "CR-1007",
+      "accuracy": "Yes",
+      "actual_parts": "Compressor",
+      "notes": "No",
+      "submitted_at": "2026-07-29 15:43:52"
+    }
+  }
+}

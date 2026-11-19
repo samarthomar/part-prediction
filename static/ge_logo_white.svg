@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <!-- GE Monogram Circle - WHITE version for dark backgrounds -->
+  <g transform="translate(50, 50)">
+    <circle cx="0" cy="0" r="42" fill="none" stroke="white" stroke-width="3"/>
+    <circle cx="0" cy="0" r="36" fill="none" stroke="white" stroke-width="1.5"/>
+    <text x="0" y="14" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="46" fill="white" letter-spacing="-2">GE</text>
+    <path d="M -25,-36 C -15,-42 15,-42 25,-36" fill="none" stroke="white" stroke-width="1.5"/>
+    <path d="M -25,36 C -15,42 15,42 25,36" fill="none" stroke="white" stroke-width="1.5"/>
+  </g>
+  <text x="115" y="58" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="30" fill="white" letter-spacing="3">GE APPLIANCES</text>
+</svg>

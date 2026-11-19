@@ -1,0 +1,152 @@
+[
+  {
+    "model": "RF-28X",
+    "product_type": "Refrigerator",
+    "manufacturer": "CoolTech Industries",
+    "bom_parts": ["compressor", "thermostat", "evaporator_coil", "condenser_fan", "refrigerant_valve", "door_seal"],
+    "common_failure_parts": ["compressor", "thermostat"],
+    "avg_lifespan_years": 12,
+    "warranty_years": 3,
+    "known_issues": ["Compressor tends to fail after 4-5 years", "Thermostat calibration drift common in humid climates"]
+  },
+  {
+    "model": "RF-22S",
+    "product_type": "Refrigerator",
+    "manufacturer": "CoolTech Industries",
+    "bom_parts": ["compressor", "thermostat", "evaporator_coil", "condenser_fan", "refrigerant_valve", "door_seal"],
+    "common_failure_parts": ["evaporator_coil", "thermostat"],
+    "avg_lifespan_years": 10,
+    "warranty_years": 2,
+    "known_issues": ["Evaporator coil icing in high-humidity regions", "Door seal degradation after 3 years"]
+  },
+  {
+    "model": "RF-35P",
+    "product_type": "Refrigerator",
+    "manufacturer": "CoolTech Industries",
+    "bom_parts": ["compressor", "thermostat", "evaporator_coil", "condenser_fan", "refrigerant_valve", "door_seal", "ice_maker_assembly"],
+    "common_failure_parts": ["compressor", "refrigerant_valve"],
+    "avg_lifespan_years": 14,
+    "warranty_years": 5,
+    "known_issues": ["Refrigerant valve leak reported in batch 2023-Q2", "Compressor overheats under sustained 45°C+ ambient"]
+  },
+  {
+    "model": "WM-12A",
+    "product_type": "Washing Machine",
+    "manufacturer": "AquaWash Systems",
+    "bom_parts": ["inlet_valve", "drain_pump", "door_seal", "motor", "control_board", "drum_bearing", "suspension_rod"],
+    "common_failure_parts": ["inlet_valve", "drain_pump"],
+    "avg_lifespan_years": 8,
+    "warranty_years": 2,
+    "known_issues": ["Inlet valve solenoid sticks after 3 years", "Drain pump impeller cracks under hard water conditions"]
+  },
+  {
+    "model": "WM-18B",
+    "product_type": "Washing Machine",
+    "manufacturer": "AquaWash Systems",
+    "bom_parts": ["inlet_valve", "drain_pump", "door_seal", "motor", "control_board", "drum_bearing", "suspension_rod", "detergent_dispenser"],
+    "common_failure_parts": ["motor", "control_board"],
+    "avg_lifespan_years": 10,
+    "warranty_years": 3,
+    "known_issues": ["Motor capacitor failure common after 4 years", "Control board firmware glitch causes cycle interruption"]
+  },
+  {
+    "model": "WM-20C",
+    "product_type": "Washing Machine",
+    "manufacturer": "AquaWash Systems",
+    "bom_parts": ["inlet_valve", "drain_pump", "door_seal", "motor", "control_board", "drum_bearing", "suspension_rod"],
+    "common_failure_parts": ["drum_bearing", "door_seal"],
+    "avg_lifespan_years": 9,
+    "warranty_years": 2,
+    "known_issues": ["Drum bearing noise after heavy-load cycles", "Door seal mold growth in coastal regions"]
+  },
+  {
+    "model": "AC-15T",
+    "product_type": "HVAC",
+    "manufacturer": "ClimaControl Pvt Ltd",
+    "bom_parts": ["fan_motor", "compressor", "blower_wheel", "capacitor", "expansion_valve", "air_filter", "pcb_controller"],
+    "common_failure_parts": ["fan_motor", "compressor"],
+    "avg_lifespan_years": 10,
+    "warranty_years": 3,
+    "known_issues": ["Fan motor bearing wear in dusty environments", "Compressor short-cycling in voltage fluctuation zones"]
+  },
+  {
+    "model": "AC-22R",
+    "product_type": "HVAC",
+    "manufacturer": "ClimaControl Pvt Ltd",
+    "bom_parts": ["fan_motor", "compressor", "blower_wheel", "capacitor", "expansion_valve", "air_filter", "pcb_controller", "inverter_module"],
+    "common_failure_parts": ["capacitor", "fan_motor"],
+    "avg_lifespan_years": 12,
+    "warranty_years": 5,
+    "known_issues": ["Capacitor bloating during monsoon season", "Inverter module overheats in poorly ventilated installations"]
+  },
+  {
+    "model": "AC-30S",
+    "product_type": "HVAC",
+    "manufacturer": "ClimaControl Pvt Ltd",
+    "bom_parts": ["fan_motor", "compressor", "blower_wheel", "capacitor", "expansion_valve", "air_filter", "pcb_controller"],
+    "common_failure_parts": ["blower_wheel", "expansion_valve"],
+    "avg_lifespan_years": 11,
+    "warranty_years": 3,
+    "known_issues": ["Blower wheel imbalance causes rattling noise", "Expansion valve sticking in sub-zero climates"]
+  },
+  {
+    "model": "WT-500",
+    "product_type": "Wind Turbine",
+    "manufacturer": "Vortex Energy Solutions",
+    "bom_parts": ["bearing_assembly", "rotor_blade", "gearbox", "pitch_system", "yaw_motor", "brake_pad", "generator_winding"],
+    "common_failure_parts": ["bearing_assembly", "rotor_blade"],
+    "avg_lifespan_years": 25,
+    "warranty_years": 10,
+    "known_issues": ["Main bearing fatigue after 8-10 years in high-wind corridors", "Rotor blade leading edge erosion in coastal installations"]
+  },
+  {
+    "model": "WT-300",
+    "product_type": "Wind Turbine",
+    "manufacturer": "Vortex Energy Solutions",
+    "bom_parts": ["bearing_assembly", "rotor_blade", "gearbox", "pitch_system", "yaw_motor", "brake_pad"],
+    "common_failure_parts": ["gearbox", "pitch_system"],
+    "avg_lifespan_years": 20,
+    "warranty_years": 7,
+    "known_issues": ["Gearbox oil contamination in sandy environments", "Pitch system hydraulic leak after 5 years"]
+  },
+  {
+    "model": "WT-700",
+    "product_type": "Wind Turbine",
+    "manufacturer": "Vortex Energy Solutions",
+    "bom_parts": ["bearing_assembly", "rotor_blade", "gearbox", "pitch_system", "yaw_motor", "brake_pad", "generator_winding", "nacelle_cooling_unit"],
+    "common_failure_parts": ["bearing_assembly", "yaw_motor"],
+    "avg_lifespan_years": 25,
+    "warranty_years": 10,
+    "known_issues": ["Yaw motor overheating during rapid directional changes", "Bearing assembly grease degradation in extreme heat"]
+  },
+  {
+    "model": "GN-100",
+    "product_type": "Industrial Generator",
+    "manufacturer": "PowerForge Industries",
+    "bom_parts": ["cooling_fan", "alternator", "oil_pump", "fuel_injector", "voltage_regulator", "starter_motor", "exhaust_manifold"],
+    "common_failure_parts": ["cooling_fan", "alternator"],
+    "avg_lifespan_years": 15,
+    "warranty_years": 5,
+    "known_issues": ["Cooling fan motor burnout during prolonged operation above 40°C", "Alternator brush wear accelerated under continuous load"]
+  },
+  {
+    "model": "GN-250",
+    "product_type": "Industrial Generator",
+    "manufacturer": "PowerForge Industries",
+    "bom_parts": ["cooling_fan", "alternator", "oil_pump", "fuel_injector", "voltage_regulator", "starter_motor", "exhaust_manifold", "turbocharger"],
+    "common_failure_parts": ["fuel_injector", "oil_pump"],
+    "avg_lifespan_years": 18,
+    "warranty_years": 7,
+    "known_issues": ["Fuel injector clogging with low-grade diesel", "Oil pump pressure drop after 6000 operating hours"]
+  },
+  {
+    "model": "GN-500",
+    "product_type": "Industrial Generator",
+    "manufacturer": "PowerForge Industries",
+    "bom_parts": ["cooling_fan", "alternator", "oil_pump", "fuel_injector", "voltage_regulator", "starter_motor", "exhaust_manifold", "turbocharger", "radiator_core"],
+    "common_failure_parts": ["cooling_fan", "voltage_regulator"],
+    "avg_lifespan_years": 20,
+    "warranty_years": 8,
+    "known_issues": ["Voltage regulator instability under fluctuating loads", "Radiator core corrosion in humid coastal environments"]
+  }
+]
