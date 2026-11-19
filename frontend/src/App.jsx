@@ -6,11 +6,15 @@ import ResultCards from './components/ResultCards'
 import FeedbackForm from './components/FeedbackForm'
 import Dashboard from './components/Dashboard'
 import LandingView from './components/LandingView'
+import LoginScreen from './components/LoginScreen'
 import { getWsUrl } from './apiConfig'
 import { runClientSimulation } from './simulation'
 import './App.css'
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return localStorage.getItem('ge_auth_unlocked') === 'true';
+  });
   const [activeTab, setActiveTab] = useState('recommendation')
   const [complaintText, setComplaintText] = useState('')
   const [productType, setProductType] = useState('Auto-Detect')
@@ -121,9 +125,18 @@ function App() {
     setComplaintText('');
   }
 
+  if (!isAuthenticated) {
+    return <LoginScreen onLogin={() => setIsAuthenticated(true)} />;
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem('ge_auth_unlocked');
+    setIsAuthenticated(false);
+  };
+
   return (
     <div className="app-container">
-      <Header activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Header activeTab={activeTab} setActiveTab={setActiveTab} onLogout={handleLogout} />
       
       <div className="main-layout">
         {activeTab === 'recommendation' ? (

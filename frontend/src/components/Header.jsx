@@ -1,4 +1,5 @@
 import React from 'react';
+import { Lock } from 'lucide-react';
 
 const GELogo = ({ height = 40 }) => (
   <svg viewBox="0 0 400 100" height={height} xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +12,7 @@ const GELogo = ({ height = 40 }) => (
   </svg>
 );
 
-export default function Header({ activeTab, setActiveTab }) {
+export default function Header({ activeTab, setActiveTab, onLogout }) {
   return (
     <header className="header">
       <div className="header-left">
@@ -23,7 +24,7 @@ export default function Header({ activeTab, setActiveTab }) {
         </div>
       </div>
       
-      <div className="nav-tabs">
+      <div className="nav-tabs" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
         <button 
           className={`nav-tab ${activeTab === 'recommendation' ? 'active' : ''}`}
           onClick={() => setActiveTab('recommendation')}
@@ -36,6 +37,23 @@ export default function Header({ activeTab, setActiveTab }) {
         >
           Operations Dashboard
         </button>
+        {onLogout && (
+          <button 
+            className="nav-tab"
+            onClick={onLogout}
+            title="Lock Portal / Sign Out"
+            style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '6px', 
+              color: 'var(--color-text-muted)',
+              padding: '8px 12px'
+            }}
+          >
+            <Lock size={15} />
+            <span>Lock</span>
+          </button>
+        )}
       </div>
     </header>
   );
